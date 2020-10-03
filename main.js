@@ -1,7 +1,14 @@
 "use strict";
 
 {
+  //タスクリスト
   document.querySelector("button").addEventListener("click", () => {
-    document.getElementById("target").textContent = "changed";
+    const li = document.createElement("li");
+    const text = document.querySelector("input");
+    li.textContent = text.value;
+    document.querySelector("ul").appendChild(li);
+
+    text.value = "";
+    text.focus();
   });
 }
